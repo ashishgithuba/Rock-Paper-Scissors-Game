@@ -1,0 +1,144 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+}
+
+.choice:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    background-color: #081b31;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.score-board {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.score p {
+    font-size: 1.5rem;
+}
+
+#message {
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 5rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
+.msg-container {
+    margin-top: 5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    gap: 5rem;
+}
+
+/* Celebration Style */
+.celebration {
+    display: none;
+    background-color: #081b31;
+    color: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.celebration h2 {
+    font-size: 3rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+@keyframes confetti {
+    0% {
+        opacity: 0;
+        transform: translateY(-1000px) rotate(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.confetti div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    animation: confetti 2s linear infinite;
+}
+
+.confetti div:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.confetti div:nth-child(2) {
+    left: 20%;
+    animation-delay: 0.5s;
+}
+
+.confetti div:nth-child(3) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.confetti div:nth-child(4) {
+    left: 40%;
+    animation-delay: 1.5s;
+}
+
+.confetti div:nth-child(5) {
+    left: 50%;
+    animation-delay: 2s;
+}
